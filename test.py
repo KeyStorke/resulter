@@ -1,6 +1,6 @@
 import unittest
 
-from pyresult import ok, error
+from pyresult import ok, error, resultify
 from pyresult.pyresult import Result
 
 
@@ -17,6 +17,13 @@ class TestPyResult(unittest.TestCase):
     def test_ok_repr(self):
         self.assertEqual(str(ok('test ok')), 'Result: status: True; value: test ok')
 
+    def test_resultify_ok(self):
+        func = resultify(lambda x: x+1)
+        result = func(10)
+        self.assertIsInstance(result, Result)
+        self.assertTrue(result.is_ok())
+        self.assertEqual(result.value, 11)
+
     def test_error(self):
         self.assertIsInstance(error(), Result)
 
@@ -28,3 +35,10 @@ class TestPyResult(unittest.TestCase):
 
     def test_error_repr(self):
         self.assertEqual(str(error('test error')), 'Result: status: False; value: test error')
+
+    def test_resultify_error(self):
+        func = resultify(lambda x: x/0)
+        result = func(10)
+        self.assertIsInstance(result, Result)
+        self.assertFalse(result.is_ok())
+        self.assertIsInstance(result.value, ZeroDivisionError)

@@ -22,3 +22,11 @@ def error(value=None):
     return Result(status=False, value=value)
 
 
+def resultify(f):
+    def wrap_call(*args, **kwargs):
+        try:
+            return ok(f(*args, **kwargs))
+        except Exception as e:
+            return error(e)
+
+    return wrap_call
