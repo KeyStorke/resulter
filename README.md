@@ -1,8 +1,8 @@
-# PyResult
-[![Build Status](https://travis-ci.org/KeyStorke/pyresult.svg?branch=master)](https://travis-ci.org/KeyStorke/pyresult)
+# Resulter
+[![Build Status](https://travis-ci.org/KeyStorke/resulter.svg?branch=master)](https://travis-ci.org/KeyStorke/resulter)
 
 
-Pyresult is library for make a code more clearly, more readable and more supportable.
+Resulter is library for make a code more clearly, more readable and more supportable.
 
 It's simply and readable. Awesome replacement of return tuples or error codes. 
 # Example

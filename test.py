@@ -1,9 +1,9 @@
 import unittest
 
-from pyresult import ok, error, resultify, Result
+from resulter import ok, error, resultify, Result
 
 
-class TestPyResult(unittest.TestCase):
+class TestResulter(unittest.TestCase):
     def test_ok(self):
         self.assertIsInstance(ok(), Result)
 

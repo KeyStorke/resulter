@@ -2,9 +2,9 @@ from setuptools import setup
 
 setup(
     test_suite='test',
-    name='pyresult',
+    name='resulter',
     version='0.0.1',
-    packages=['pyresult'],
+    packages=['resulter'],
     license='MIT',
     author='Nickolay Ovdienko',
     author_email='Nickolay.Ovdienko@emc.com',
