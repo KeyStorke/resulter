@@ -1,4 +1,6 @@
 # PyResult
+[![Build Status](https://travis-ci.org/KeyStorke/pyresult.svg?branch=master)](https://travis-ci.org/KeyStorke/pyresult)
+
 
 Pyresult is library for make a code more clearly, more readable and more supportable.
 
