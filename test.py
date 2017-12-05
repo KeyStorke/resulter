@@ -1,7 +1,6 @@
 import unittest
 
-from pyresult import ok, error, resultify
-from pyresult.pyresult import Result
+from pyresult import ok, error, resultify, Result
 
 
 class TestPyResult(unittest.TestCase):
