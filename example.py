@@ -17,7 +17,7 @@ def divide_by_two(x):
     return _x / 2
 
 
-for i in reversed(range(-5, 5)):
+for i in range(-5, 5):
     y = divide_by_two(i)
     x = plus_two(i)
     if y.is_ok() and x.is_ok():
@@ -27,34 +27,3 @@ for i in reversed(range(-5, 5)):
     else:
         print('error')
         print()
-
-# OUTPUT
-
-# y = 2.0
-# x = 6.0
-#
-# y = 1.5
-# x = 5.0
-#
-# y = 1.0
-# x = 4.0
-#
-# y = 0.5
-# x = 3.0
-#
-# error
-#
-# y = -0.5
-# x = 1.0
-#
-# y = -1.0
-# x = 0.0
-#
-# y = -1.5
-# x = -1.0
-#
-# y = -2.0
-# x = -2.0
-#
-# y = -2.5
-# x = -3.0
