@@ -15,15 +15,34 @@ class Result:
 
 
 def ok(value=None):
+    """ create Result with status True
+
+    :param value: result value
+    :rtype: Result
+    """
     return Result(status=True, value=value)
 
 
 def error(value=None):
+    """ create Result with status False
+
+    :param value: result value
+    :rtype: Result
+    """
     return Result(status=False, value=value)
 
 
 def resultify(f):
+    """ decorator for catch an exceptions and wrap resulted value into Result objects
+
+    :param f: decorated function
+    :return: wrapped function
+    """
     def wrap_call(*args, **kwargs):
+        """ wrap function
+
+        :rtype: Result
+        """
         try:
             return ok(f(*args, **kwargs))
         except Exception as e:
